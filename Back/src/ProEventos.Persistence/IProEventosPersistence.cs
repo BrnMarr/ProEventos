@@ -12,12 +12,12 @@ namespace Back.src.ProEventos.Persistence
 
       Task<bool> SaveChangesAsync();
 
-      Task<Evento[]> GetAllEventosAsync(bool includePalestrantes);      
-      Task<Evento[]> GetAllEventosByIdAsync(int EventoId,bool includePalestrantes);
+      Task<Evento[]> GetAllEventosAsync(bool includePalestrantes);  
       Task<Evento[]> GetAllEventosByTemaAsync(string tema,bool includePalestrantes);
+      Task<Evento> GetEventoByIdAsync(int EventoId,bool includePalestrantes);
 
       Task<Palestrante[]> GetAllPalestrantesAsync(bool includeEventos);      
-      Task<Palestrante[]> GetAllPalestranteByIdAsync(int PalestranteId,bool includeEventos);
+      Task<Palestrante> GetPalestranteByIdAsync(int PalestranteId,bool includeEventos);
       Task<Palestrante[]> GetAllPalestrantesByNomeAsync(string nome,bool includeEventos);
 
    }
