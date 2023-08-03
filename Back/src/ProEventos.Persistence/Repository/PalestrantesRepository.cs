@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using ProEventos.Domain.models;
 using ProEventos.Persistence.Interface;
-using ProEventos.Persistentece.Data;
+using ProEventos.Persistence.Data;
 
-namespace Back.src.ProEventos.Persistence.Repository
+namespace ProEventos.Persistence.Repository
 {
     public class PalestrantesRepository : IPalestrantesPersistence
     {
