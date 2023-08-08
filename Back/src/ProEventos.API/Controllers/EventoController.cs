@@ -35,8 +35,7 @@ namespace ProEventos.API.Controllers
                return this.StatusCode(StatusCodes.Status500InternalServerError, $"Erro ao tentar recuperar eventos. Erro: {e.Message}");
             }
         }
-    
-    
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> GetId(int id)
         {
@@ -54,8 +53,7 @@ namespace ProEventos.API.Controllers
                return this.StatusCode(StatusCodes.Status500InternalServerError, $"Erro ao tentar recuperar eventos. Erro: {e.Message}");
             }
         }
-    
-            
+                
         [HttpGet("{tema}/tema")]
         public async Task<IActionResult> GetTema(string tema)
         {
@@ -74,7 +72,7 @@ namespace ProEventos.API.Controllers
             }
         }
         
-         [HttpPost]   
+        [HttpPost]   
         public async Task<IActionResult> Post(Evento model)
         {
             try

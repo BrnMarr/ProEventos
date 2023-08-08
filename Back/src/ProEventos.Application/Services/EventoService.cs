@@ -22,7 +22,7 @@ public class EventoService : IEventoService
            _repository.Add<Evento>(model);
            if (await _repository.SaveChangesAsync())
             {
-              return await _eventoPersistence.GetEventoByIdAsync(model.Id, false);
+              return await _eventoPersistence.GetEventoByIdAsync(model.EventoId, false);
             }  
            return null;
         }
@@ -61,7 +61,7 @@ public class EventoService : IEventoService
             _repository.Update(model);
             if (await _repository.SaveChangesAsync())
             { 
-                return await _eventoPersistence.GetEventoByIdAsync(model.Id,false);
+                return await _eventoPersistence.GetEventoByIdAsync(model.EventoId,false);
             }
 
             return null;
