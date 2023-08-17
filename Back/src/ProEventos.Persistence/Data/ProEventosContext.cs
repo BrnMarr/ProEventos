@@ -7,7 +7,7 @@ namespace ProEventos.Persistence.Data
    public class ProEventosContext : DbContext
    {
         public ProEventosContext(DbContextOptions<ProEventosContext> optinons) : base(optinons) {}     
-        public DbSet<Evento> Evento { get; set; }
+        public DbSet<Evento> Eventos { get; set; }
         public DbSet<Palestrante> Palestrantes { get; set; }
         public DbSet<Lote> Lotes { get; set; }
         public DbSet<PalestranteEvento> PalestranteEventos { get; set; }
@@ -20,12 +20,12 @@ namespace ProEventos.Persistence.Data
 
           modelBuilder.Entity<Evento>()
                   .HasMany(e => e.RedeSociais)
-                  .WithOne(rs => rs.Palestrante)
+                  .WithOne(rs => rs.Evento)
                   .OnDelete(DeleteBehavior.Cascade);
         
          modelBuilder.Entity<Palestrante>()
                   .HasMany(e => e.RedeSociais)
-                  .WithOne(pl => pl.Palestrante)
+                  .WithOne(rs => rs.Palestrante)
                   .OnDelete(DeleteBehavior.Cascade);
         
         }

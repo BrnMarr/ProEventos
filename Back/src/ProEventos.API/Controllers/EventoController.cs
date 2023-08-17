@@ -20,7 +20,7 @@ namespace ProEventos.API.Controllers
 
         [HttpGet]
         public async Task<IActionResult> Get()
-        {
+         {
             try
             {
                var eventos = await _eventoService.GetAllEventosAsync(true);
@@ -34,7 +34,7 @@ namespace ProEventos.API.Controllers
             {               
                return this.StatusCode(StatusCodes.Status500InternalServerError, $"Erro ao tentar recuperar eventos. Erro: {e.Message}");
             }
-        }
+         }
         
         [HttpGet("{id}")]
         public async Task<IActionResult> GetId(int id)

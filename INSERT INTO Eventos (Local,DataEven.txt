@@ -1,0 +1,10 @@
+INSERT INTO Eventos (Local,DataEvento,Tema,QtdPessoas,ImageUrl,Email, Telefone) 
+values (
+'São Paulo',
+'01/09/2023',
+'.Net',
+250,
+'foto.png',
+'evento@proeventos.com.br',
+'1112345678'
+) 

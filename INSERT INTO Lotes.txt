@@ -1,0 +1,1 @@
+INSERT INTO Lotes (Nome,Preco,DataInicio, DataFim,Quantidade,EventoId) VALUES ('1º Lote',100,'20/08/2023','25/08/2023',200,1)
