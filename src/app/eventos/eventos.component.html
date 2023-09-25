@@ -48,7 +48,7 @@
          <td>{{ev.lotes[0].nome }}</td>   
          <td>
             <button type="button" class="btn btn-primary btn-sm mr-2"><i class="fa fa-edit"></i></button>
-            <button type="button" class="btn btn-danger btn-sm mr-2" tooltip="Excluir"  (click)="openModal(template)"><i class="fa fa-trash"></i></button>
+            <button type="button" class="btn btn-danger btn-sm mr-2" tooltip="Excluir" ><i class="fa fa-trash"></i></button>
          </td>     
       </tr>
    </tbody>
@@ -66,7 +66,7 @@
 <ng-template #template>
    <div class="modal-body text-center">
      <p>Voce quer confirmar ?</p>
-     <button type="button" class="btn btn-default" (click)="confirm()" >Sim</button>
-     <button type="button" class="btn btn-primary" (click)="decline()" >Não</button>
+     <button type="button" class="btn btn-default" >Sim</button>
+     <button type="button" class="btn btn-primary">Não</button>
    </div>
  </ng-template>
